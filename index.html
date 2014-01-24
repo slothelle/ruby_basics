@@ -56,9 +56,11 @@
 					 	<li>tacos</li>
 					 	<li>teaching people how to code</li>
 					 	<li>gesturing a lot with her hands</li>
+					 	<li class="fragment">dancing in public<br><img src="http://i.imgflip.com/3qpjk.gif">
+							<p>&nbsp;</p>
+					 		<p><small>Sorry about those last two things.</small></p>
+					 	</li>
 					 </ul>
-					<p>&nbsp;</p>
-					<p><small>Sorry about that last part.</small></p>
 				</section>
 
 				<section>
@@ -404,6 +406,7 @@ d = c * a - b
 					<p>&nbsp;</p>
 
 					<h3>What is <code>d</code>?</h3>
+					<h3 class="fragment"><code>0</code></h3>
 				</section>
 
 				<section>
@@ -579,10 +582,20 @@ puts name * 15
 				</section>
 
 				<section data-background="#FF6075">
-					<h1>Bang <code class="fragment">!</code></h1>
+					<h1><code>!</code></h1>
 					<h3 class="fragment">
-						Strings in Ruby are mutable. Lots of String class methods have destructive and non-destructive counterparts.
+						Objects in Ruby are mutable.
 					</h3>
+					<h4 class="fragment">
+						Lots of String class methods have destructive and non-destructive counterparts.
+					</h4>
+
+					<aside class="notes">
+						<p>Objects in Ruby are mutable. What this means is they can be changed in a destructive manner - if you apply a change to your object that is destructive, it will never be the same again. There is no undo button, no history.</p>
+						<p>How do you know if you're being destructive or not? Many destructive methods have a bang character - or exclamation point - at the end of them to signal to you to proceed with caution.</p>
+						<p>non-destructive methods return a copy of your string with the change applied to it</p>
+						<p>destructive methods are going to return your string with the change applied to it</p>
+					</aside>
 				</section>
 
 
@@ -598,10 +611,10 @@ puts name * 15
 					<p>Add code to <code>hello.rb</code> and then run it in Terminal.</p>
 					<pre><code data-trim contenteditable class="ruby">
 me = "Liz"
-me.delete("z") # => "Li"
+me.delete("z")
 puts me #=> "Liz"
 
-me.delete!("z") #=> "Li"
+me.delete!("z")
 puts me #=> "Li"
 				</code></pre>
 
@@ -622,10 +635,7 @@ puts me #=> "Li"
 					<h2><code>.swapcase</code> and <code>.swapcase!</code></h2>
 					<pre><code data-trim contenteditable class="ruby">
 me = "Liz"
-me.swapcase # => "lIZ"
-puts me #=> "Liz"
-
-me.swapcase! #=> "lIZ"
+me.swapcase!
 puts me #=> "lIZ"
 					</code></pre>
 				</section>
@@ -642,7 +652,7 @@ puts me #=> "lIZ"
 					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
 					<pre><code data-trim contenteditable class="ruby">
 party = "all the time"
-party.reverse! # => "emit eht lla"
+party.reverse!
 puts party # => "emit eht lla"
 					</code></pre>
 				</section>
@@ -830,6 +840,7 @@ alphabet # => ["x", "l", "a", "b", "d", "c"]
 					<div class="fragment">
 						<p>&nbsp;</p>
 						<h3>Changes <em>each item</em> in the array</h3>
+						<h3 class="fragment">Iteration</h3>
 					</div>
 
 					<aside class="notes">
@@ -841,33 +852,97 @@ alphabet # => ["x", "l", "a", "b", "d", "c"]
 				</section>
 
 
-
 <!--
 	****************************************************
-		ARRAYS: CLASS METHODS
+		ARRAYS: ITERATION
 	****************************************************
 -->
 
 				<section>
-					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
+					<h2>Iteration</h2>
 					<pre><code data-trim contenteditable class="ruby">
-sundae = ["ice cream", "hot fudge", "peanuts"]
 
-sundae.reverse # => ["peanuts", "hot fudge", "ice cream"]
-
-sundae # => ["ice cream", "hot fudge", "peanuts"]
-
-sundae.reverse!
-
-sundae # => ["peanuts", "hot fudge", "ice cream"]
 					</code></pre>
-
 					<aside class="notes">
-						<p>
-							Just like strings, arrays have class methods. Some of these have the same name and functionality, like reverse shown here. Reverse applies itself to the entire array.
-						</p>
+						<p>Sometimes a difficult concept to grasp, iteration is very cool and awesomely powerful.</p>
+						<p>At the core of iterating over arrays is the 'each' method. They allows you to access EACH item in the array. What you do with the item at that point is up to you.</p>
 					</aside>
 				</section>
+
+
+
+<!--
+	****************************************************
+		BOOLEANS
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1>Booleans</h1>
+				</section>
+
+
+<!--
+	****************************************************
+		NIL
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1><code>nil</code></h1>
+				</section>
+
+
+<!--
+	****************************************************
+		METHODS: WRITING YOUR OWN
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1>Writing your own methods</h1>
+				</section>
+
+
+<!--
+	****************************************************
+		CONDITIONALS
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1>Conditionals</h1>
+				</section>
+
+
+<!--
+	****************************************************
+		CLASSES
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1>Classes</h1>
+				</section>
+
+
+<!--
+	****************************************************
+		ARRAYS
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1>YOU DID IT!
+						<span class="fragment">YAYYYY!!!</span>
+						<span class="fragment">
+							<img src="http://media.tumblr.com/c9561842b6aef89fc1a7a4358cf5fbdf/tumblr_inline_mtp6amV2U31rnm470.gif">
+						</span>
+					</h1>
+				</section>
+
+
+
 
 
             																
@@ -895,74 +970,6 @@ sundae # => ["peanuts", "hot fudge", "ice cream"]
 					<pre><code data-trim contenteditable class="ruby">
 
 					</code></pre>
-				</section>
-
-
-            																
-            																
-            																
-
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable class="ruby">
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
-					<h1>You are now Ruby masters.</h1>
 				</section>
 
 			</div>
