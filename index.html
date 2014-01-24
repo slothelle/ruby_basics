@@ -35,7 +35,12 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
+<!--
+	****************************************************
+		INTRODUCTION
+	****************************************************
+-->
+
 			<div class="slides">
 				<section data-background="#FF6075">
 					<h1>Ruby Basics</h1>
@@ -75,6 +80,12 @@ puts 'hello, beginners'
 					</aside>
 				</section>
 
+<!--
+	****************************************************
+		INTRODUCTION: CODE CONVENTIONS
+	****************************************************
+-->
+
 				<section data-background="#FF6075">
 					<h1>Code Conventions</h1>
 				</section>
@@ -104,6 +115,14 @@ $ ruby taco.rb
 					</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		INTRODUCTION: EXERCISES
+	****************************************************
+-->
+
+
 				<section>
 					<h2>Exericses!</h2>
 					<ul>
@@ -122,6 +141,12 @@ $ ruby taco.rb
 					</ul>
 				</section>
 
+<!--
+	****************************************************
+		INTRODUCTION: RUNNING RUBY CODE
+	****************************************************
+-->
+
 				<section data-background="#FF6075">
 					<h1>Two ways to run Ruby</h1>
 					<aside class="notes">
@@ -135,6 +160,14 @@ $ ruby taco.rb
 						</ol>
 					</aside>
 				</section>
+
+
+<!--
+	****************************************************
+		INTRODUCTION: RUNNING RUBY CODE: TERMINAL
+	****************************************************
+-->
+
 
 				<section>
 					<h2>One: <code>irb</code></h2>
@@ -153,6 +186,13 @@ $ exit
 						<p>irb is really convenient and easy to use, but it won't save your code anywhere. for the bulk of this workshop, you won't be using irb unless specifically mentioned.</p>
 					</aside>
 				</section>
+
+
+<!--
+	****************************************************
+		INTRODUCTION: RUNNING RUBY CODE: SUBLIME
+	****************************************************
+-->
 
 				<section>
 					<h2>Two: in a file</h2>
@@ -177,6 +217,12 @@ $ ruby hello.rb
 					</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		VARIABLES
+	****************************************************
+-->
 
 				<section data-background="#FF6075">
 					<h1>Ruby time!</h1>
@@ -206,6 +252,13 @@ $ ruby hello.rb
 					</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		VARIABLES: NAMING
+	****************************************************
+-->
+
 				<section>
 					<h2>Variable naming rules</h2>
 					<ul>
@@ -221,6 +274,13 @@ $ ruby hello.rb
 						</p>
 					</aside>
 				</section>
+
+
+<!--
+	****************************************************
+		VARIABLES: SAMPLE NAMES
+	****************************************************
+-->
 
 				<section>
 					<h2>Variable names</h2>
@@ -282,6 +342,13 @@ $ ruby hello.rb
 					</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		NUMBERS
+	****************************************************
+-->
+
 				<section data-background="#FF6075">
 					<h1>Numbers</h1>
 				</section>
@@ -315,6 +382,14 @@ $ ruby hello.rb
 						</p>
 					</aside>
 				</section>
+
+
+<!--
+	****************************************************
+		NUMBERS: EXERCISES
+	****************************************************
+-->
+
 
 				<section>
 					<h2>Exercise: Math in <code>irb</code></h2>
@@ -350,6 +425,14 @@ d = c * a - b
 					<p><small>* try and blow it up :)</small></p>
 				</section>
 
+
+<!--
+	****************************************************
+		NUMBERS: MODULO
+	****************************************************
+-->
+
+
 				<section>
 					<h2>Modulo</h2>
 					<h3>Can you guess what modulo does?</h3>
@@ -374,6 +457,13 @@ $ ruby hello.rb
 				<section data-background="#FF6075">
 					<h1>Strings</h1>
 				</section>
+
+
+<!--
+	****************************************************
+		STRINGS
+	****************************************************
+-->
 
 				<section>
 					<h2>Strings</h2>
@@ -411,6 +501,14 @@ $ ruby hello.rb
 					</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		STRINGS: WITH NUMBERS
+	****************************************************
+-->
+
+
 				<section>
 					<h2>Strings: with numbers!</h2>
 					<p><code>hello.rb</code>:</p>
@@ -430,6 +528,14 @@ $ ruby hello.rb
 						strings can contain numbers, but you can’t do math with the string-ified number. it will treat it like a string, not a number.
 					</aside>
 				</section>
+
+
+<!--
+	****************************************************
+		STRINGS: EXERCISE
+	****************************************************
+-->
+
 
 				<section>
 					<h2>Exericse: Very variable</h2>
@@ -461,6 +567,14 @@ puts name * 15
 					</ul>
 				</section>
 
+
+<!--
+	****************************************************
+		STRINGS: CLASS METHODS
+	****************************************************
+-->
+
+
 				<section data-background="#FF6075">
 					<h1>Playing with strings</h1>
 					<h1 class="fragment"><small>Nicely (sometimes)...</small></h1>
@@ -472,6 +586,14 @@ puts name * 15
 						Strings in Ruby are mutable. Lots of String class methods have destructive and non-destructive counterparts.
 					</h3>
 				</section>
+
+
+<!--
+	****************************************************
+		STRINGS: CLASS METHODS: DELETE
+	****************************************************
+-->
+
 
 				<section>
 					<h2><code>.delete</code> and <code>.delete!</code></h2>
@@ -490,6 +612,14 @@ puts me #=> "Li"
 				</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		STRINGS: CLASS METHODS: SWAPCASE
+	****************************************************
+-->
+
+
 				<section>
 					<h2><code>.swapcase</code> and <code>.swapcase!</code></h2>
 					<pre><code data-trim contenteditable>
@@ -502,6 +632,14 @@ puts me #=> "lIZ"
 					</code></pre>
 				</section>
 
+
+<!--
+	****************************************************
+		STRINGS: CLASS METHODS: REVERSE
+	****************************************************
+-->
+
+
 				<section>
 					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
 					<pre><code data-trim contenteditable>
@@ -510,6 +648,14 @@ party.reverse! # => "emit eht lla"
 puts party # => "emit eht lla"
 					</code></pre>
 				</section>
+
+
+<!--
+	****************************************************
+		STRINGS: CLASS METHODS: <<
+	****************************************************
+-->
+
 
 
 				<section>
@@ -523,6 +669,10 @@ puts letters
 					<aside class="notes">
 						Very important to note that this is destructive
 					</aside>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Arrays</h1>
 				</section>
 
 
