@@ -63,9 +63,7 @@
 
 				<section>
 					<h1>Workshop Info</h1>
-					<pre><code data-trim>
-puts 'hello, beginners'
-					</code></pre>
+					<h3><code>puts 'hello, beginners'</code></h3>
 
 					<aside class="notes">
 						<p>What to expect:</p>
@@ -95,7 +93,7 @@ puts 'hello, beginners'
 					<p><strong class="turquoise">Text Editor:</strong>
 						Displays your code with pretty syntax highlighting and lets you save.
 					</p>
-					<pre><code data-trim>
+					<pre><code data-trim class="ruby">
 # taco.rb
 taco = "yummy"
 puts taco
@@ -356,7 +354,7 @@ $ ruby hello.rb
 				<section>
 					<h2>Ruby can math!</h2>
 					<p><code>hello.rb</code>:</p>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 a = 1
 b = 2
 c = a + b
@@ -397,7 +395,7 @@ $ ruby hello.rb
 						<li>Open up <code>irb</code></li>
 						<li>Type this into it:</li>
 					</ul>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 a = 5
 b = 10
 c = 2
@@ -437,7 +435,7 @@ d = c * a - b
 					<h2>Modulo</h2>
 					<h3>Can you guess what modulo does?</h3>
 					<p><code>hello.rb</code>:</p>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 puts 10 % 5
 puts 10 % 3
 					</code></pre>
@@ -468,7 +466,7 @@ $ ruby hello.rb
 				<section>
 					<h2>Strings</h2>
 					<p><code>hello.rb</code>:</p>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 first_name = 'Liz'
 last_name = 'Abinante'
 
@@ -512,7 +510,7 @@ $ ruby hello.rb
 				<section>
 					<h2>Strings: with numbers!</h2>
 					<p><code>hello.rb</code>:</p>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 age = '28'
 name = 'Liz Abinante'
 
@@ -541,26 +539,26 @@ $ ruby hello.rb
 					<h2>Exericse: Very variable</h2>
 					<ul>
 						<li>Create the following variables and assign them values:
-							<pre><code data-trim contenteditable>
+							<pre><code data-trim contenteditable class="ruby">
 age
 							</code></pre>
-							<pre><code data-trim contenteditable>
+							<pre><code data-trim contenteditable class="ruby">
 name
 							</code></pre>
-							<pre><code data-trim contenteditable>
+							<pre><code data-trim contenteditable class="ruby">
 city
 							</code></pre>
-							<pre><code data-trim contenteditable>
+							<pre><code data-trim contenteditable class="ruby">
 favorite_color
 							</code></pre>
-							<pre><code data-trim contenteditable>
+							<pre><code data-trim contenteditable class="ruby">
 favorite_food
 							</code></pre>
 						</li>
 						<li>Use concatenation or interpolation to create new variables.</li>
 						<li>What do you expect? What do you get?</li>
 						<li>What happens when you do this?
-							<pre><code data-trim contenteditable>
+							<pre><code data-trim contenteditable class="ruby">
 puts name * 15
 							</code></pre>
 						</li>
@@ -598,7 +596,7 @@ puts name * 15
 				<section>
 					<h2><code>.delete</code> and <code>.delete!</code></h2>
 					<p>Add code to <code>hello.rb</code> and then run it in Terminal.</p>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 me = "Liz"
 me.delete("z") # => "Li"
 puts me #=> "Liz"
@@ -622,7 +620,7 @@ puts me #=> "Li"
 
 				<section>
 					<h2><code>.swapcase</code> and <code>.swapcase!</code></h2>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 me = "Liz"
 me.swapcase # => "lIZ"
 puts me #=> "Liz"
@@ -642,7 +640,7 @@ puts me #=> "lIZ"
 
 				<section>
 					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 party = "all the time"
 party.reverse! # => "emit eht lla"
 puts party # => "emit eht lla"
@@ -660,7 +658,7 @@ puts party # => "emit eht lla"
 
 				<section>
 					<h2><code><<</code></h2>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 letters = "abc"
 letters << "domino"
 puts letters
@@ -671,10 +669,92 @@ puts letters
 					</aside>
 				</section>
 
+
+<!--
+	****************************************************
+		ARRAYS
+	****************************************************
+-->
+
+
 				<section data-background="#FF6075">
 					<h1>Arrays</h1>
 				</section>
 
+				<section>
+					<h2>Arrays</h2>
+					<pre><code data-trim contenteditable class="ruby">
+things_in_tacos = ["cheese", "guacamole"]
+things_in_salsa = ["lime juice", "mangos"]
+
+things_in_my_belly = [things_in_salsa, things_in_tacos, "ice cream"]
+					</code></pre>
+
+					<aside class="notes">
+						<p>
+							arrays are collections. they’re an ordered group of other objects. you can insert all sorts of things into arrays: you’re not limited to strings or numbers, you can add other arrays (mind blown) and fancy ruby objects. things in your array will stay in the order you put them unless you tell them to move around.
+						</p>
+
+						<p>
+							an array is distinguished in code by brackets: []
+						</p>
+					</aside>
+				</section>
+
+
+<!--
+	****************************************************
+		ARRAYS: LENGTH
+	****************************************************
+-->
+
+				<section>
+					<h2><code>.length</code></h2>
+					<pre><code data-trim contenteditable class="ruby">
+array = ["chickens", "two cents", "ke$ha"]
+
+array.length
+# => 3
+					</code></pre>
+
+					<aside class="notes">
+						<p>you can count the number of things in your array with array.length</p>
+					</aside>
+				</section>
+
+
+<!--
+	****************************************************
+		ARRAYS: INDEX
+	****************************************************
+-->
+
+				<section>
+					<h2>Using the index</h2>
+					<pre><code data-trim contenteditable class="ruby">
+array = ["chickens", "two cents", "ke$ha"]
+
+array[0] # => "chickens"
+array[1] # => "two cents"
+array[2] # => "ke$ha"
+					</code></pre>
+
+					<p>&nbsp;</p>
+
+					<h3>What happens if you try <code>array[432]</code>?</h3>
+
+					<h3 class="fragment"><code># => nil</code></h3>
+
+					<aside class="notes">
+						<p>
+							because arrays are an ordered list of items, every item has a position. this position is called an index. you can find the item in an index by using the bracketed syntax pictured above and typing an integer.
+						</p>
+
+						<p>
+							note that arrays start counting at index 0.
+						</p>
+					</aside>
+				</section>
 
 
             																
@@ -686,9 +766,16 @@ puts letters
 				</section>
 
 
+<!--
+	****************************************************
+		ARRAYS
+	****************************************************
+-->
+
 				<section>
 					<h2><code>.reverse</code></h2>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
+
 					</code></pre>
 				</section>
 
@@ -700,7 +787,7 @@ puts letters
 
 				<section>
 					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
+					<pre><code data-trim contenteditable class="ruby">
 function linkify( selector ) {
   if( supports3DTransforms ) {
 
@@ -764,6 +851,8 @@ function linkify( selector ) {
 
 		</div>
 
+		<!-- No touchy, this is all from reveal.js -->
+
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
@@ -778,7 +867,7 @@ function linkify( selector ) {
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
