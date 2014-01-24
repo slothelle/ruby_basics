@@ -757,6 +757,39 @@ array[2] # => "ke$ha"
 				</section>
 
 
+<!--
+	****************************************************
+		ARRAYS: ADDING NEW ITEMS
+	****************************************************
+-->
+
+				<section>
+					<h2>Adding new items</h2>
+					<pre><code data-trim contenteditable class="ruby">
+taco = ["cheese", "guacamole"]
+taco << "sour cream"
+taco << "potato chips" << "jelly beans"
+# => ["cheese", "guacamole", "sour cream", "potato chips", "jelly beans"]
+					</code></pre>
+
+					<p>&nbsp;</p>
+
+					<h3 class="fragment">WAT. Isn't <code><<</code> for strings?!?! How?</h3>
+
+					<h4 class="fragment">Duck typing!</h4>
+
+					<aside class="notes">
+						<p>
+							remember when we played with strings and we saw the << syntax? how does ruby know that we’re not trying to add a string together here?
+						</p>
+
+						<p>
+							ruby is what is called a duck typed language. if you’re me, you’ll spend your whole life trying to remember what duck typed is short for, but what you really need to know is that ruby doesn’t require you to state what kind of object something is. ruby knows. ruby knows to use the push method for an array and not a string. it’s magic.
+						</p>
+					</aside>
+				</section>
+
+
             																
 
 
