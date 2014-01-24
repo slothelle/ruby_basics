@@ -861,7 +861,16 @@ alphabet # => ["x", "l", "a", "b", "d", "c"]
 				<section>
 					<h2>Iteration</h2>
 					<pre><code data-trim contenteditable class="ruby">
-
+favorite_foods = ["cheese", "chocolate", "tacos", "ice cream"]
+favorite_foods.each do |food|
+  puts "I like to eat, eat, eat, #{food}."
+end
+					</code></pre>
+					<pre class="fragment"><code data-trim contenteditable class="ruby">
+# => "I like to eat, eat, eat, cheese."
+# => "I like to eat, eat, eat, chocolate."
+# => "I like to eat, eat, eat, tacos."
+# => "I like to eat, eat, eat, ice cream."
 					</code></pre>
 					<aside class="notes">
 						<p>Sometimes a difficult concept to grasp, iteration is very cool and awesomely powerful.</p>
