@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Ruby Basics</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="#FF6075">
+					<h1>Ruby Basics</h1>
+					<h3>As much Ruby as Liz can teach you in 100 minutes.</h3>
+					<p>&nbsp;</p>
+					<h6><small>Be my friend: liz@instructure.com</small></h6>
+				</section>
+
+				<section>
+					<h2>Um, who are you?</h2>
+					<p>I am a very nice person who loves:</p>
+					<ul>
+					 	<li>tacos</li>
+					 	<li>teaching people how to code</li>
+					 	<li>gesturing a lot with her hands</li>
+					 </ul>
+					<p>&nbsp;</p>
+					<p><small>Sorry about that last part.</small></p>
+				</section>
+
+				<section>
+					<h1>Workshop Info</h1>
+					<pre><code data-trim>
+puts 'hello, beginners'
+					</code></pre>
+
+					<aside class="notes">
+						<p>What to expect:</p>
+						<ul>
+							<li>beginner level workshop for people who have never done programming</li>
+							<li>assumes you know nothing</li>
+							<li>if you know stuff, you will probably be bored and can totally leave now without feeling mean</li>
+							<li>requires you to use terminal and a text editor (download sublime text 2 if you haven’t yet)</li>
+							<li>you cannot use text edit</li>
+							<li>no, really, you cannot use text edit</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Code Conventions</h1>
+				</section>
+
+				<section>
+					<h2>Text Editor or Terminal?</h2>
+					<p><strong class="turquoise">Text Editor:</strong>
+						Displays your code with pretty syntax highlighting and lets you save.
+					</p>
+					<pre><code data-trim>
+# taco.rb
+taco = "yummy"
+puts taco
+# => "yummy"
+					</code></pre>
+					<p>&nbsp;</p>
+					<p><strong class="turquoise">Terminal:</strong>
+						Lets you run your code or play around in <code>irb</code>.
+					</p>
+					<pre><code data-trim class="bash">
+$ ruby taco.rb
+# => "yummy"
+					</code></pre>
+
+					<aside class="notes">
+						The most important thing to distinguish here is that anything you type into the terminal is preceded by a $. You don't actually type the $ sign, just type everything after it. More on irb in a minute.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Exericses!</h2>
+					<ul>
+						<li>Some slides have bullets on them.
+							<ul>
+								<li>These bullets tell you what to do.</li>
+								<li>You should listen to the bullets...</li>
+								<li>or you won't learn anything.</li>
+							</ul>
+						</li>
+						<li>Who run the world?
+							<ul>
+								<li><strike>Girls</strike>. <strike>Beyoncé</strike>. <strike>Me</strike>. Bullets!</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Two ways to run Ruby</h1>
+					<aside class="notes">
+						<p>
+							there are two ways to run your ruby code. if you want to visually see the output, you use “puts”. this prints whatever your result is to the terminal screen. puts works for both options here.
+						</p>
+
+						<ol>
+							<li>irb.</li>
+							<li>in a file that you run as a program.</li>
+						</ol>
+					</aside>
+				</section>
+
+				<section>
+					<h2>One: <code>irb</code></h2>
+					<p>Terminal:</p>
+					<pre><code data-trim class="bash">
+$ irb
+$ puts 'hello world'
+# => 'hello world'
+$ exit
+					</code></pre>
+
+					<aside class="notes">
+						<p>
+							 this is an interactive ruby shell. open terminal and type irb (all lowercase, no spaces). this will drop you into an environment that has your version of ruby loaded. you can type ruby directly into irb. to leave irb, type ‘exit’ (all lowercase, no spaces). you have to type exit when you’re done or your computer will explode and instructure will be sad.
+						</p>
+						<p>irb is really convenient and easy to use, but it won't save your code anywhere. for the bulk of this workshop, you won't be using irb unless specifically mentioned.</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Two: in a file</h2>
+
+					<p><code>hello.rb</code>:</p>
+					<pre><code data-trim>
+puts 'hello taco'
+					</code></pre>
+
+					<p>Terminal:</p>
+					<pre><code data-trim class="bash">
+$ cd Desktop
+$ ruby hello.rb
+# => 'hello taco'
+					</code></pre>
+
+					<aside class="notes">
+						<p>this is how we're going to be doing most of our ruby-ing today.</p>
+						<p>
+							go into your text editor (Sublime Text) and make a new file. save it on your desktop and call it "hello.rb". type the lines on the slide and save. go to terminal and navigate to your file, then type 'ruby hello.rb' exactly as it appears and hit enter. you should see 'hello taco' print out in terminal.
+						</p>
+					</aside>
+				</section>
+
+
+				<section data-background="#FF6075">
+					<h1>Ruby time!</h1>
+					<h1 class="fragment">Variables</h1>
+				</section>
+
+				<section>
+					<h2>What is a variable?</h2>
+
+					<h1><code class="turquoise">a = 1</code></h1>
+
+					<p class="fragment"><code class="orange">a</code> is your variable</p>
+					<p class="fragment"><code class="turquoise">1</code> is the value of that variable</p>
+
+					<aside class="notes">
+						<p>
+							you can assign a value to a variable. you can assign any value you want to a variable, in this example the variable is ‘a’ and the value is ‘1’. that means anywhere in your code where you type ‘a’, its value will be inserted when your program gets run.
+						</p>
+
+						<p>
+							variables can be assigned to anything; we’re using a number here because it’s easy.
+						</p>
+
+						<p>
+							if you say this out loud, you would say “a equals 1”, or “a is 1.” ruby is often compared to plain english because it is very easy to read. plain english is also used when you’re naming variables in a real program, like canvas.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Variable naming rules</h2>
+					<ul>
+						<li>snake case (<code>taco_party</code>)</li>
+						<li>all lowercase</li>
+						<li>starts with a letter</li>
+						<li>no special characters except for _</li>
+					</ul>
+
+					<aside class="notes">
+						<p>
+							ruby, like any good language, has a style guide that can provide you with more information about valid variable names.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Variable names</h2>
+
+					<div class="fragment">
+						<h3>Yes!</h3>
+						<ul>
+							<li><code>hello_taco</code></li>
+							<li><code>taco5000</code></li>
+						</ul>
+					</div>
+
+					<div class="fragment">
+						<p>&nbsp;</p>
+						<h3>No! ABSOLUTELY NOT.</h3>
+						<ul>
+							<li><code>99bottles</code></li>
+							<li><code>34232</code></li>
+							<li><code>extra-chz</code></li>
+							<li><code>taco's?!</code></li>
+						</ul>
+					</div>
+
+					<div class="fragment">
+						<p>&nbsp;</p>
+						<h3>Special cases</h3>
+						<ul>
+							<li><code>TACO</code></li>
+							<li><code>Party</code></li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						<p>Yes!</p>
+						<ul>
+							<li>underscores are ok, but they can’t be the first character. this is called snake case, you can use it to string words together</li>
+							<li>variables can contain numbers, but they can’t be the first character.</li>
+						</ul>
+
+						<p>No!</p>
+						<ul>
+							<li>you can’t start a variable name with a number. it will explode.</li>
+							<li>you can use a number as a variable. it will explode.</li>
+							<li>you can’t use a hyphen. it will explode.</li>
+							<li>guess what? quotations? also explode. that goes for any special character.</li>
+						</ul>
+
+						<p>Wat?</p>
+						<ul>
+							<li>all caps variable names are stylistically special. they’re called constants. there is nothing in ruby that says all constants have to be uppercase, or all uppercase variables have to be constants. until you know what a constant is, don’t use all uppercase variables.</li>
+							<li>capitalizing the first letter is also a special style thing in ruby. it is generally reserved for classes or modules and rubyists will get mad at you if you use them incorrectly.</li>
+							<li>rubyists like their style guide. it makes them feel organized and cohesive, kind of like a gang. it’s generally best to not violate the ‘suggested’ or ‘best practices’ rules.</li>
+						</ul>
+
+						<p><strong>Reserved words</p></strong>
+						<p>
+							there are some reserved words in ruby that you can’t use either. things like if, else, end, def, class, module, etc can’t be used as variable names because they have a special function in ruby. for now, just use fun variable names. it makes programming more exciting.
+						</p>
+					</aside>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Numbers</h1>
+				</section>
+
+				<section>
+					<h2>Ruby can math!</h2>
+					<p><code>hello.rb</code>:</p>
+					<pre><code data-trim contenteditable>
+a = 1
+b = 2
+c = a + b
+puts a + b
+puts c
+					</code></pre>
+
+					<p>Terminal:</p>
+					<pre><code data-trim class="bash" contenteditable>
+$ ruby hello.rb
+# => 3
+# => 3
+					</code></pre>
+					<aside class="notes">
+						<p>
+							open up your hello.rb file with your text editor. we’re going to stick with numbers for now. type out something similar to what i have above - don’t be afraid to change the numbers!
+						</p>
+
+						<p><strong>variables are how you save a tiny piece of information to use again, or to use later.</strong></p>
+
+						<p>
+							we’re assigning 3 variables here: a, b, and c. a and b are assigned to numbers; c is assigned to the total of those two variables. ruby is smart enough to know that a and b are numbers, and c should be the total of those two numbers.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Exercise: Math in <code>irb</code></h2>
+					<ul>
+						<li>Open up <code>irb</code></li>
+						<li>Type this into it:</li>
+					</ul>
+					<pre><code data-trim contenteditable>
+a = 5
+b = 10
+c = 2
+d = c * a - b
+					</code></pre>
+					<p>&nbsp;</p>
+
+					<h3>What is <code>d</code>?</h3>
+				</section>
+
+				<section>
+					<h2>Exercise: Such math</h2>
+					<ul>
+						<li>Assign some numbers to variables and do some math.</li>
+						<li>Write code in <code>irb</code> or save your file and run with terminal.
+							<ul>
+								<li>What happens when you combine operators?</li>
+								<li>What happens when you use decimals?</li>
+								<li>Do you get any unexpected results? *</li>
+							</ul>
+						</li>
+					</ul>
+
+					<p>&nbsp;</p>
+					<p><small>* try and blow it up :)</small></p>
+				</section>
+
+				<section>
+					<h2>Modulo</h2>
+					<h3>Can you guess what modulo does?</h3>
+					<p><code>hello.rb</code>:</p>
+					<pre><code data-trim contenteditable>
+puts 10 % 5
+puts 10 % 3
+					</code></pre>
+
+					<p>Terminal:</p>
+					<pre><code data-trim contenteditable class="bash">
+$ ruby hello.rb
+# => 0
+# => 1
+					</code></pre>
+
+					<aside class="notes">
+						this returns the remainder if the first number is divided by the second.
+					</aside>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Strings</h1>
+				</section>
+
+				<section>
+					<h2>Strings</h2>
+					<p><code>hello.rb</code>:</p>
+					<pre><code data-trim contenteditable>
+first_name = 'Liz'
+last_name = 'Abinante'
+
+name = first_name + ' ' + last_name
+name_alt = “#{first_name} 'The Taco' #{last_name}”
+
+puts name
+puts name_alt
+					</code></pre>
+
+					<p>Terminal:</p>
+					<pre><code data-trim contenteditable class="bash">
+$ ruby hello.rb
+# => Liz Abinante
+# => Liz 'The Taco' Abinante
+					</code></pre>
+
+					<aside class="notes">
+						<p>
+							strings can be assigned to variables, too. strings can also be added together.
+						</p>
+
+						<p>
+							note the two different methods!
+						</p>
+
+						<p>
+							the first is concatenation, the second is interpolation. you can use either one.
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Strings: with numbers!</h2>
+					<p><code>hello.rb</code>:</p>
+					<pre><code data-trim contenteditable>
+age = '28'
+name = 'Liz Abinante'
+
+puts name + ' is ' + age
+					</code></pre>
+
+					<p>Terminal:</p>
+					<pre><code data-trim contenteditable class="bash">
+$ ruby hello.rb
+# => Liz Abinante is 28
+					</code></pre>
+					<aside class="notes">
+						strings can contain numbers, but you can’t do math with the string-ified number. it will treat it like a string, not a number.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Exericse: Very variable</h2>
+					<ul>
+						<li>Create the following variables and assign them values:
+							<pre><code data-trim contenteditable>
+age
+							</code></pre>
+							<pre><code data-trim contenteditable>
+name
+							</code></pre>
+							<pre><code data-trim contenteditable>
+city
+							</code></pre>
+							<pre><code data-trim contenteditable>
+favorite_color
+							</code></pre>
+							<pre><code data-trim contenteditable>
+favorite_food
+							</code></pre>
+						</li>
+						<li>Use concatenation or interpolation to create new variables.</li>
+						<li>What do you expect? What do you get?</li>
+						<li>What happens when you do this?
+							<pre><code data-trim contenteditable>
+puts name * 15
+							</code></pre>
+						</li>
+					</ul>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Playing with strings</h1>
+					<h1 class="fragment"><small>Nicely (sometimes)...</small></h1>
+				</section>
+
+				<section data-background="#FF6075">
+					<h1>Bang <code class="fragment">!</code></h1>
+					<h3 class="fragment">
+						Strings in Ruby are mutable. Lots of String class methods have destructive and non-destructive counterparts.
+					</h3>
+				</section>
+
+
+
+
+
+            																
+
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Fragmented Views</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<ol>
+							<li class="fragment"><code>any type</code></li>
+							<li class="fragment"><em>of view</em></li>
+							<li class="fragment"><strong>fragments</strong></li>
+						</ol>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's a few styles of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment roll-in">roll-in</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-green">highlight-green</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p class="fragment highlight-current-blue">highlight-current-blue</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Spectacular image!</h2>
+					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
+						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
+					</a>
+				</section>
+
+				<section>
+					<h1>You are now Ruby masters.</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
