@@ -126,7 +126,7 @@ $ ruby taco.rb
 					<h1>Two ways to run Ruby</h1>
 					<aside class="notes">
 						<p>
-							there are two ways to run your ruby code. if you want to visually see the output, you use “puts”. this prints whatever your result is to the terminal screen. puts works for both options here.
+							there are two ways to run your ruby code. if you want to visually see the output, you use "puts". this prints whatever your result is to the terminal screen. puts works for both options here.
 						</p>
 
 						<ol>
@@ -201,7 +201,7 @@ $ ruby hello.rb
 						</p>
 
 						<p>
-							if you say this out loud, you would say “a equals 1”, or “a is 1.” ruby is often compared to plain english because it is very easy to read. plain english is also used when you’re naming variables in a real program, like canvas.
+							if you say this out loud, you would say "a equals 1", or "a is 1." ruby is often compared to plain english because it is very easy to read. plain english is also used when you’re naming variables in a real program, like canvas.
 						</p>
 					</aside>
 				</section>
@@ -383,7 +383,7 @@ first_name = 'Liz'
 last_name = 'Abinante'
 
 name = first_name + ' ' + last_name
-name_alt = “#{first_name} 'The Taco' #{last_name}”
+name_alt = "#{first_name} 'The Taco' #{last_name}"
 
 puts name
 puts name_alt
@@ -471,6 +471,58 @@ puts name * 15
 					<h3 class="fragment">
 						Strings in Ruby are mutable. Lots of String class methods have destructive and non-destructive counterparts.
 					</h3>
+				</section>
+
+				<section>
+					<h2><code>.delete</code> and <code>.delete!</code></h2>
+					<p>Add code to <code>hello.rb</code> and then run it in Terminal.</p>
+					<pre><code data-trim contenteditable>
+me = "Liz"
+me.delete("z") # => "Li"
+puts me #=> "Liz"
+
+me.delete!("z") #=> "Li"
+puts me #=> "Li"
+				</code></pre>
+
+				<aside class="notes">
+					From this point foward, we're going to be add the code into our hello.rb file (or another file if you want) and then running it in Terminal. I won't be showing the input and output side by side like previous slides. The output is going to be shown in-line from here on out.
+				</aside>
+				</section>
+
+				<section>
+					<h2><code>.swapcase</code> and <code>.swapcase!</code></h2>
+					<pre><code data-trim contenteditable>
+me = "Liz"
+me.swapcase # => "lIZ"
+puts me #=> "Liz"
+
+me.swapcase! #=> "lIZ"
+puts me #=> "lIZ"
+					</code></pre>
+				</section>
+
+				<section>
+					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
+					<pre><code data-trim contenteditable>
+party = "all the time"
+party.reverse! # => "emit eht lla"
+puts party # => "emit eht lla"
+					</code></pre>
+				</section>
+
+
+				<section>
+					<h2><code><<</code></h2>
+					<pre><code data-trim contenteditable>
+letters = "abc"
+letters << "domino"
+puts letters
+# => "abcdomino"
+					</code></pre>
+					<aside class="notes">
+						Very important to note that this is destructive
+					</aside>
 				</section>
 
 
