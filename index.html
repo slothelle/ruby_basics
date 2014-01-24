@@ -790,8 +790,93 @@ taco << "potato chips" << "jelly beans"
 				</section>
 
 
+<!--
+	****************************************************
+		ARRAYS: CLASS METHODS
+	****************************************************
+-->
+
+				<section data-background="#FF6075">
+					<h1>Playing with arrays</h1>
+					<h1 class="fragment"><small>Nicely (sometimes)...</small></h1>
+				</section>
+
+
+<!--
+	****************************************************
+		ARRAYS: CLASS METHODS: TWO WAYS
+	****************************************************
+-->
+
+				<section>
+					<h2>Playing with arrays: two ways</h2>
+					<div class="fragment">
+						<h3>Array class methods</h3>
+						<p>
+							Changes the array itself, not the individual items in it.
+							<pre><code data-trim contenteditable class="ruby">
+sundae = ["ice cream", "hot fudge", "peanuts"]
+sundae.reverse!
+sundae # => ["peanuts", "hot fudge", "ice cream"]
+							</code></pre>
+							<pre><code data-trim contenteditable class="ruby">
+alphabet = ["x", "l", "a", "b", "d", "c"]
+alphabet.sort # => ["a", "b", "c", "d", "l", "x"]
+alphabet # => ["x", "l", "a", "b", "d", "c"]
+							</code></pre>
+						</p>
+					</div>
+
+					<div class="fragment">
+						<p>&nbsp;</p>
+						<h3>Changes <em>each item</em> in the array</h3>
+					</div>
+
+					<aside class="notes">
+						<p>
+							<strong>Array class methods: </strong>
+							These are things like sort, reverse, shuffle, etc. They don't do anything to the individual objects inside of the array. They: change the order of items, select random items, remove specific items, etc. Just like the string class methods, these can be destructive or non-destructive. They don't always contain a bang character, so it's really good to read the documentation if you're trying something new.
+						</p>
+					</aside>
+				</section>
+
+
+
+<!--
+	****************************************************
+		ARRAYS: CLASS METHODS
+	****************************************************
+-->
+
+				<section>
+					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
+					<pre><code data-trim contenteditable class="ruby">
+sundae = ["ice cream", "hot fudge", "peanuts"]
+
+sundae.reverse # => ["peanuts", "hot fudge", "ice cream"]
+
+sundae # => ["ice cream", "hot fudge", "peanuts"]
+
+sundae.reverse!
+
+sundae # => ["peanuts", "hot fudge", "ice cream"]
+					</code></pre>
+
+					<aside class="notes">
+						<p>
+							Just like strings, arrays have class methods. Some of these have the same name and functionality, like reverse shown here. Reverse applies itself to the entire array.
+						</p>
+					</aside>
+				</section>
+
+
             																
 
+<!--
+	****************************************************
+		ARRAYS
+	****************************************************
+-->
 
 				<section data-background="#FF6075">
 					<h1>Playing with strings</h1>
@@ -806,7 +891,7 @@ taco << "potato chips" << "jelly beans"
 -->
 
 				<section>
-					<h2><code>.reverse</code></h2>
+					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
 					<pre><code data-trim contenteditable class="ruby">
 
 					</code></pre>
