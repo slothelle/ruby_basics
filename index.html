@@ -917,24 +917,116 @@ end
 
 <!--
 	****************************************************
-		ARRAYS
+		CONDITIONALS: IF
 	****************************************************
 -->
 
 				<section>
-					<h2><code>if</code>, <code>elsif</code> and <code>else</code></h2>
+					<h2><code>if</code></h2>
 					<h3>Conditionals change how your code responds.</h3>
 					<pre><code data-trim contenteditable class="ruby">
 num = 88
 
 if num % 2 == 0
-	puts "This is an even number. YAY!"
-elsif num <= 0
-	puts "This number is too weird to be odd or even."
-else
-	puts "This number is odd."
+  puts "This is an even number. YAY!"
 end
+
+# => "This is an even number. YAY!"
 					</code></pre>
+
+					<aside class="notes">
+						<p>Conditionals can be very simple, or very complex. There are a few different types of conditionals in Ruby, the most basic is <code>if</code>.</p>
+						<p>If the statement following '<code>if</code>' is truthy (true or a value that is true), then the code in that block will execute. If it's not true, it will continue to skip through your conditional until it finds something that applies to it. In this case, your number is even, so it will print this statement out to your terminal.</p>
+						<p>What would happen if num was 31? Or 0? Or a string?</p>
+					</aside>
+				</section>
+
+
+<!--
+	****************************************************
+		CONDITIONALS: ELSE
+	****************************************************
+-->
+
+				<section>
+					<h2><code>else</code></h2>
+					<pre><code data-trim contenteditable class="ruby">
+num = 81
+
+if num % 2 == 0
+  puts "This is an even number. YAY!"
+else
+  puts "This is not an even number."
+end
+
+# => "This is not an even number."
+					</code></pre>
+
+					<aside class="notes">
+						<p>Else is a fallback: it only executes if the other conditional statments return false.</p>
+						<p>Because this is a catchall statement, you can sometimes get unexpected results. What if we only want this statement to work with positive numbers? We need to build in more conditions.</p>
+					</aside>
+				</section>
+
+<!--
+	****************************************************
+		CONDITIONALS: ELSif
+	****************************************************
+-->
+
+				<section>
+					<h2><code>elsif</code></h2>
+					<pre><code data-trim contenteditable class="ruby">
+num = -2
+
+if num % 2 == 0
+  puts "This is an even number. YAY!"
+elsif num <= 0
+  puts "This number is poopy."
+else
+  puts "This is probably an odd number."
+end
+
+# => "This is an even number. YAY!"
+					</code></pre>
+
+					<h3>WAT?!</h3>
+					<div class="fragment">
+						<p>Order matters! Try this instead:</p>
+
+							<pre><code data-trim contenteditable class="ruby">
+num = -2
+
+if num <= 0
+  puts "This number is poopy."
+elsif num % 2 == 0
+  puts "This is an even number. YAY!"
+else
+  puts "This is probably an odd number."
+end
+
+# => "This number is poopy."
+						</code></pre>
+					</div>
+
+					<aside class="notes">
+						<p>This code looks a lot better. Any number less than or equal to 0 will tells us that it is poopy. We can add tons more conditionals in here if we want to.</p>
+						<p>Order is very important for conditionals. As soon as a condition is true, the code stops checking for anything else. It doesn't stop and check for the best match, it returns the first match.</p>
+					</aside>
+				</section>
+
+
+<!--
+	****************************************************
+		CONDITIONALS: EXERCISES
+	****************************************************
+-->
+
+				<section>
+					<h2>Exercise<strike>s</strike></h2>
+					<ul>
+						<li>Make an array of numbers and iterate over it to print out results whether a number is even or odd</li>
+					</ul>
 				</section>
 
 
