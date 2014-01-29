@@ -992,7 +992,7 @@ end
 
 					<h3>WAT?!</h3>
 					<div class="fragment">
-						<p>Order matters! Try this instead:</p>
+						<p>Order matters! First match, <strong>not</strong> best match.</p>
 
 							<pre><code data-trim contenteditable class="ruby">
 num = -2
@@ -1011,6 +1011,7 @@ end
 
 					<aside class="notes">
 						<p>This code looks a lot better. Any number less than or equal to 0 will tells us that it is poopy. We can add tons more conditionals in here if we want to.</p>
+						<p>But wait - there is something funky here. Why is it telling us the number if even when the second conditional is a better match?</p>
 						<p>Order is very important for conditionals. As soon as a condition is true, the code stops checking for anything else. It doesn't stop and check for the best match, it returns the first match.</p>
 					</aside>
 				</section>
