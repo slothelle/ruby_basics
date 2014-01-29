@@ -882,23 +882,59 @@ end
 
 <!--
 	****************************************************
-		BOOLEANS
+		ARRAYS
+	****************************************************
+-->
+
+				<section>
+					<h2>Exercises: Using <code>each</code>...</h2>
+					<ul>
+						<li>Print all of the items in your array as uppercase words</li>
+						<li>Print the index of each item in your array</li>
+						<li>Print all of the items in your array reversed, and reverse the order of your array</li>
+					</ul>
+
+					<aside class="notes">
+						<p>
+							Link to the Array class docs is available in Canvas.
+						</p>
+						<p>
+							<code>each</code> is justt an example of iterating over each item in arrays. You can use other methods that will go down deep and do other magical things to your arrays. These are call <code>enumerables</code>. They're a little beyond the scope that we have time to cover, but if you keep practicing Ruby, they are a core component of the language.
+						</p>
+					</aside>
+				</section>
+
+<!--
+	****************************************************
+		CONDITIONALS
 	****************************************************
 -->
 
 				<section data-background="#FF6075">
-					<h1>Booleans</h1>
+					<h1>Conditionals</h1>
 				</section>
 
 
 <!--
 	****************************************************
-		NIL
+		ARRAYS
 	****************************************************
 -->
 
-				<section data-background="#FF6075">
-					<h1><code>nil</code></h1>
+				<section>
+					<h2><code>if</code>, <code>elsif</code> and <code>else</code></h2>
+					<h3>Conditionals change how your code responds.</h3>
+					<pre><code data-trim contenteditable class="ruby">
+num = 88
+
+if num % 2 == 0
+	puts "This is an even number. YAY!"
+elsif num <= 0
+	puts "This number is too weird to be odd or even."
+else
+	puts "This number is odd."
+end
+					</code></pre>
 				</section>
 
 
@@ -910,17 +946,6 @@ end
 
 				<section data-background="#FF6075">
 					<h1>Writing your own methods</h1>
-				</section>
-
-
-<!--
-	****************************************************
-		CONDITIONALS
-	****************************************************
--->
-
-				<section data-background="#FF6075">
-					<h1>Conditionals</h1>
 				</section>
 
 
