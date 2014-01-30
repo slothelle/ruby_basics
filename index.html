@@ -821,9 +821,9 @@ taco << "potato chips" << "jelly beans"
 				<section>
 					<h2>Playing with arrays: two ways</h2>
 					<div class="fragment">
-						<h3>Array class methods</h3>
-						<p>
+						<h3>
 							Changes the array itself, not the individual items in it.
+						</h3>
 							<pre><code data-trim contenteditable class="ruby">
 sundae = ["ice cream", "hot fudge", "peanuts"]
 sundae.reverse!
@@ -834,7 +834,6 @@ alphabet = ["x", "l", "a", "b", "d", "c"]
 alphabet.sort # => ["a", "b", "c", "d", "l", "x"]
 alphabet # => ["x", "l", "a", "b", "d", "c"]
 							</code></pre>
-						</p>
 					</div>
 
 					<div class="fragment">
@@ -1043,19 +1042,129 @@ end
 
 
 <!--
-	****************************************************
-		CLASSES
-	****************************************************
+  ****************************************************
+    METHODS: WRITING YOUR OWN
+  ****************************************************
 -->
 
-				<section data-background="#FF6075">
-					<h1>Classes</h1>
+        <section data-background="#FF6075">
+          <h1>Writing your own methods</h1>
+        </section>
+
+        <section>
+          <h2>What is a method?</h2>
+          <h3>
+            Methods are chunks of code that you can reuse so you don't have to type the same thing <span class="fragment"><strong>over</strong></span> <span class="fragment">and <em>over</em></span> <span class="fragment">and <strong><em>over</em></strong> again.</span>
+          </h3>
+          <p class="fragment">
+          	You actually already know what methods are. Remember <code>.delete!</code> and <code>.delete</code>? Those are methods for strings.
+          </p>
+        </section>
+
+        <section>
+        	<h2>Writing your own method</h2>
+        	<h3>... is surprisingly easy!</h3>
+        </section>
+
+				<section>
+					<h2>The anatomy of a method</h2>
+        	<pre><code data-trim contenteditable class="ruby">
+def taco_party
+  puts "WE LIKE TO PARTY ALL THE TIME"
+  puts "PARTY ALL THE TIMEEEE"
+  puts "EAT TACOS ALL THE TIME!"
+end
+
+taco_party
+taco_party
+taco_party
+        	</code></pre>
+        	<h3 class="fragment">This method has no arguments.</h3>
+        	<h3 class="fragment">What are arguments?</h3>
+				</section>
+
+        <section>
+        	<h2>Methods with arguments</h2>
+        	<p>Remember our numbers conditional from earlier?</p>
+        	<pre><code data-trim contenteditable class="ruby">
+def number_biography(num)
+  if num <= 0
+    puts "This number is poopy."
+  elsif num % 2 == 0
+    puts "This is an even number. YAY!"
+  else
+    puts "This is probably an odd number."
+  end
+end
+
+number_biography(-2)
+# => "This number is poopy."
+
+number_biography(2)
+# => "This is an even number. YAY!"
+            </code></pre>
+        </section>
+
+        <section>
+        	<h2>Methods can have more than 1 argument</h2>
+        	<h1 class="fragment">OMG WHAT IS HAPPENING?!</h1>
+        	<h3 class="fragment">Keep calm and code on.</h3>
+        </section>
+
+        <section>
+        	<h2>Ok, a real example</h2>
+        	<pre><code data-trim contenteditable class="ruby">
+def salutations(greeting, name)
+  puts "#{greeting}, #{name.upcase}. Give me a hug!"
+end
+
+salutations("Goodbye", "Spike")
+# => "Goodbye, SPIKE. Give me a hug!"
+
+salutations("Oh heyyyyyy", "Angel")
+# => "Oh heyyyyyy, ANGEL. Give me a hug!"
+        	</code></pre>
+        </section>
+
+        <section>
+        	<h2>Getting RUL RUL fancy</h2>
+        	<h3>You can use a variable as an argument.</h3>
+        	<h1 class="fragment">OMG, I KNOW RIGHT?</h1>
+        </section>
+
+        <section>
+        	<h2>Variables and Return Values</h2>
+        	<pre><code data-trim contenteditable class="ruby">
+def introduce(name, food)
+  greet = "Hello, this is #{name}. "
+  yummy = "#{name}'s favorite food is #{food}."
+  puts greet + yummy
+end
+
+me = "Liz"
+foodz = "TACOS"
+
+introduce(me, foodz)
+# => "Hello, this is Liz. Liz's favorite food is TACOS."
+					</code></pre>
+        </section>
+
+        <section>
+					<h2>Exercises</h2>
+					<ul>
+						<li>Write a method that takes more than 1 argument and returns a sentence composed of all the arguments.</li>
+						<li>Write a method that uses modulo.</li>
+						<li>Write a multiple-line method with a return statement.</li>
+						<li>Write a method that takes an array as an argument. *</li>
+					</ul>
+					<p>&nbsp;</p>
+					<small class="fragment">* YOU SO FANCY</small>
 				</section>
 
 
 <!--
 	****************************************************
-		ARRAYS
+		THE END
 	****************************************************
 -->
 
@@ -1068,40 +1177,40 @@ end
 					</h1>
 				</section>
 
-
-
-
-
-            																
-
-<!--
-	****************************************************
-		ARRAYS
-	****************************************************
--->
-
 				<section data-background="#FF6075">
-					<h1>Playing with strings</h1>
-					<h1 class="fragment"><small>Nicely (sometimes)...</small></h1>
+					<h1>Learning more....</h1>
 				</section>
-
-
-<!--
-	****************************************************
-		ARRAYS
-	****************************************************
--->
 
 				<section>
-					<h2><code>.reverse</code> and <code>.reverse!</code></h2>
-					<pre><code data-trim contenteditable class="ruby">
-
-					</code></pre>
+					<h3>This book is legit, guys.</h3>
+					<center><img src="book.jpg" alt=""></center>
 				</section>
 
-			</div>
+				<section>
+					<h3>Shameless self promotion:<br>Girl Develop It Salt Lake City</h3>
+					<center><img src="gdi.png" alt=""></center>
+				</section>
 
-		</div>
+				<section>
+					<h3>Free! Codecademy.com</h3>
+					<center><img src="codecademy.png" alt=""></center>
+				</section>
+
+				<section>
+					<h3>Cheap! TeamTreehouse.com</h3>
+					<center><img src="treehouse.png" alt=""></center>
+				</section>
+
+				<section>
+					<h3>Cheap! CodeSchool.com</h3>
+					<center><img src="codeschool.png" alt=""></center>
+				</section>
+
+				<section>
+					<h1>Me!</h1>
+					<h2>I'm nice. You can chat me with questions.</h2>
+				</section>
+
 
 		<!-- No touchy, this is all from reveal.js -->
 
